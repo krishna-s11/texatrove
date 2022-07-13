@@ -1,0 +1,178 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+@layer base {
+  html {
+    @apply tw-font-sans;
+  }
+
+  body {
+    @apply tw-bg-primary-color tw-text-primary-color tw-text-body;
+  }
+
+  /* antd start */
+
+  .ant-form-item .ant-upload.ant-upload-drag {
+    @apply tw-py-5;
+  }
+
+  .ant-upload.ant-upload-drag p.ant-upload-text {
+    @apply tw-font-lato tw-text-secondary-color tw-font-medium;
+  }
+
+  .ant-upload.ant-upload-drag p.ant-upload-hint {
+    @apply tw-font-lato tw-text-secondary-color;
+  }
+
+  .ant-upload.ant-upload-drag p.ant-upload-drag-icon .anticon {
+    @apply tw-text-secondary-color;
+  }
+
+  /* antd end */
+
+  .tw-top-m {
+    @apply tw-mt-10;
+  }
+
+  .tw-subtitle-main {
+    @apply tw-text-h1 tw-tracking-1 tw-font-normal;
+  }
+
+  .tw-title-main {
+    @apply tw-text-3rem tw-tracking-1 tw-font-bold;
+  }
+
+  .tw-section-title {
+    @apply tw-text-2xl tw-font-bold tw-tracking-1;
+  }
+
+  .tw-section-description {
+    @apply tw-text-base tw-text-secondary-color tw-font-normal;
+  }
+
+  .tw-main-title-other-page {
+    @apply tw-text-34px tw-font-semibold tw-tracking-1 tw-leading-11;
+  }
+
+  .tw-subtitle-other-page {
+    @apply tw-text-2xl tw-font-medium tw-tracking-1;
+  }
+
+  .tw-base-title {
+    @apply tw-text-lg tw-tracking-1 tw-font-bold;
+  }
+
+  .tw-filter-title {
+    @apply tw-text-base;
+  }
+
+  .tw-price {
+    @apply tw-text-yellow-color tw-font-semibold;
+  }
+
+  .tw-zoom-effect {
+    @apply tw-transition-transform tw-transform hover:tw-scale-105;
+  }
+
+  .tw-flex-center {
+    @apply tw-flex tw-justify-center tw-items-center;
+  }
+  .tw-texa-button {
+    @apply tw-bg-secondary-color tw-text-primary-color hover:tw-bg-secondary-color focus:tw-bg-secondary-color hover:tw-text-primary-color focus:tw-text-primary-color tw-rounded-lg;
+  }
+
+  .tw-border-texa-active {
+    @apply tw-border-primary-yellow hover:tw-border-primary-yellow focus:tw-border-primary-yellow;
+  }
+
+  .tw-border-texa-normal {
+    @apply tw-border-c4c4c4 hover:tw-border-c4c4c4 focus:tw-border-c4c4c4;
+  }
+
+  /* utils */
+
+  .tw-text-ellipsis {
+    @apply tw-overflow-ellipsis tw-overflow-hidden tw-whitespace-nowrap;
+  }
+
+  /* card */
+  .tw-card-wrapper {
+    @apply tw-mx-2 tw-my-4 tw-border tw-rounded-lg tw-border-light-white;
+  }
+
+  .card-container {
+    @apply tw-bg-white tw-shadow-card tw-rounded-lg tw-p-7;
+  }
+
+  /* Nav bar */
+  .tw-navbar-link {
+    @apply tw-mr-4 tw-flex tw-items-center tw-font-semibold tw-text-base;
+  }
+
+  .tw-gh-tabs {
+    @apply tw-text-primary-color tw-font-medium tw-py-5 md:tw-px-14 tw-px-4 tw-block tw-text-base focus:tw-outline-none;
+  }
+  .tw-gh-tabs.active {
+    @apply tw-shadow-tab tw-rounded-xl tw-relative tw-bg-primary-color;
+  }
+
+  .tw-gh-tabs.active::after {
+    @apply tw-bg-primary-color;
+    content: "";
+    position: absolute;
+    height: 25px;
+    width: 100%;
+    bottom: -14px;
+    left: 0;
+    z-index: 2;
+  }
+
+  .tw-tab-container {
+    @apply tw-shadow-tab tw-min-h-32 tw-relative tw-bg-primary-color tw-rounded-xl tw-p-10;
+    top: -2px;
+  }
+
+  .tw-form-label {
+    @apply tw-text-sm tw-text-primary-color tw-mb-4 tw-font-medium;
+  }
+
+  .tw-form-input {
+    @apply tw-w-full tw-bg-white tw-text-secondary-color tw-text-sm tw-border-2 tw-border-gray-color tw-rounded-xl  tw-px-4 tw-py-4 tw-font-medium focus:tw-outline-none;
+  }
+
+  .link-title {
+    @apply tw-text-xs tw-text-secondary-color focus:tw-underline tw-cursor-pointer;
+  }
+
+  .effect {
+    @apply tw-transform tw-transition-all tw-duration-150 tw-ease-out;
+  }
+
+  /* modal style */
+
+  .tw-modal {
+    @apply tw-flex tw-fixed tw-inset-0 tw-bg-transparent tw-z-9999 tw-justify-center tw-h-screen tw-w-screen tw-items-center tw-antialiased;
+  }
+  .tw-modal-backdrop {
+    @apply tw-opacity-60 tw-bg-gray-900 tw-absolute tw-inset-0;
+  }
+  .tw-modal-container {
+    @apply tw-flex tw-flex-col tw-absolute tw-py-5 tw-bg-white tw-w-11/12 tw-max-w-screen-lg tw-max-h-screen tw-mx-auto tw-rounded-lg tw-border tw-border-gray-300 tw-shadow-xl;
+  }
+  .tw-modal-header {
+    @apply tw-flex tw-flex-row tw-justify-between tw-px-6 tw-pb-2 tw-bg-transparent;
+  }
+  .tw-modal-title {
+    @apply tw-text-base tw-font-medium tw-text-gray-800;
+  }
+  .tw-modal-body {
+    @apply tw-flex tw-flex-col tw-overflow-auto tw-px-6 tw-pb-5 tw-pt-0 tw-bg-transparent;
+  }
+  .tw-modal-footer {
+    @apply tw-flex tw-flex-row tw-items-center tw-justify-end tw-px-5 tw-pt-5 tw-bg-transparent tw-border-t tw-border-gray-200;
+  }
+}
